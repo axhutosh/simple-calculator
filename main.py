@@ -28,7 +28,42 @@ def add():
   sum=num1+num2
   t3.insert(END,str(sum))
 
+def sub():
+  num1=int(t1.get())
+  num2=int(t2.get())
+  sum=num1-num2
+  t3.insert(END,str(sum))
+
+def mul():
+  num1=int(t1.get())
+  num2=int(t2.get())
+  sum=num1*num2
+  t3.insert(END,str(sum))
+
+def div():
+  num1=int(t1.get())
+  num2=int(t2.get())
+  sum=num1/num2
+  t3.insert(END,str(sum))
+
+def clear():
+  t1.delete(0,END)
+  t2.delete(0,END)
+  t3.delete(0,END)
+
 
 b1=Button(window, text="Add",command=add)
-b1.place(x=180,y=200)
+b1.place(x=50,y=200)
+
+b2=Button(window, text="Sub",command=sub)
+b2.place(x=110,y=200)
+
+b3=Button(window, text="mul",command=mul)
+b3.place(x=170,y=200)
+
+b4=Button(window, text="div",command=div)
+b4.place(x=230,y=200)
+
+b5=Button(window, text="clear",command=clear)
+b5.place(x=140,y=250)
 
